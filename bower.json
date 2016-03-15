@@ -1,0 +1,10 @@
+{
+	"name": "Modular Backbone",
+	"version": "0.0.1",
+	"dependencies": {
+		"backbone-amd": "^1.1.0",
+		"underscore-amd": "^1.5.2",
+		"bootstrap": "^3.3.6",
+		"requirejs": "^2.1.22"
+	}
+}
