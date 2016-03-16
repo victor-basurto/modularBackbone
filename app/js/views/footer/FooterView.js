@@ -3,7 +3,7 @@ define([
 	'underscore',
 	'backbone',
 	'models/owner/OwnerModel',
-	'text!templates/footer/footerTemplate'
+	'text!templates/footer/footerTemplate.html'
 ], function( $, _, Backbone, OwnerModel, footerTemplate ) {
 	'use strict';
 
@@ -24,10 +24,9 @@ define([
 		},
 
 		render: function() {
-			var compiledTemplate,
-				data = {};
+			var compiledTemplate;
 
-			data = {
+			var data = {
 				owner: this.model.toJSON(),
 				_: _
 			}

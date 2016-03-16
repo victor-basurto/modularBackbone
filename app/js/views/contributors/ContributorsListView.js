@@ -31,9 +31,6 @@ define([
 
 		render: function() {
 			var self = this,
-				goldPodium = {},
-				silverPodium = {},
-				bronzePodium = {},
 				podium, // there are three podiums for each group
 				bronzeCompiledTemplate,
 				silverCompiledTemplate,
@@ -46,25 +43,25 @@ define([
 
 			$( '#contributors-list' ).hide();
 
-			goldPodium = {
+			var goldPodium = {
 				baseHeight: '80px',
 				baseWith: '120px',
 				achievement: 'Over 50 Contributions'
 			}
 
-			silverPodium = {
+			var silverPodium = {
 				baseWith: '60px',
 				baseWith: '160px',
 				achievement: '5 - 50 Contributions'
 			}
 
-			bronzePodium = {
+			var bronzePodium = {
 				baseWith: '40px',
 				baseWith: '680px',
 				achievement: '1 - 5 Contributions'
 			}
 
-			data = {
+			var data = {
 				contributors: self.goldContributors,
 				_: _,
 				podium: goldPodium

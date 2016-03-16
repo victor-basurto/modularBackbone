@@ -1,0 +1,22 @@
+{
+	"name": "modular_backbone",
+	"version": "0.0.1",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo 'Error: no test specidied' && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:victor-basurto/modularBackbone.git"
+	},
+	"author": "victor basurto",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/victor-basurto/modularBackbone/issues"
+	},
+	"homepage": "https://github.com/victor-basurto/modularBackbone#readme",
+	"dependencies": {
+		"express": "^4.13.4",
+		"body-parser": "^1.15.0"
+	}
+}

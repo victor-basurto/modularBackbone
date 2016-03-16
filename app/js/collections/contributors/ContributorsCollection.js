@@ -7,7 +7,7 @@ define([ 'underscore', 'backbone', 'models/contributor/ContributorModel' ], func
 		initialize: function( models, options ) {},
 
 		url: function() {
-			return 'https://api.github.com/repos/victor-basurto/modularBackbone';
+			return 'https://api.github.com/repos/victor-basurto';
 		},
 
 		parse: function( data ) {
@@ -20,8 +20,8 @@ define([ 'underscore', 'backbone', 'models/contributor/ContributorModel' ], func
 				ArrayWithUniqueValues = [],
 				objectCounter = {};
 
-			for ( i = 0; i < length; i++ ) {
-				var currentMemberOfArrayKey = JSON.stringify( selfArray ),
+			for ( var i = 0; i < length; i++ ) {
+				var currentMemberOfArrayKey = JSON.stringify( selfArray[ i ] ),
 					currentMemberOfArrayValue = selfArray[ i ];
 
 				if( objectCounter[ currentMemberOfArrayKey ] === undefined ) {

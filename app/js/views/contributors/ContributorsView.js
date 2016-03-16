@@ -24,19 +24,15 @@ define([
 		},
 
 		render: function() {
-			var compiledTemplate,
-				total_contributions,
-				total_contributors,
-				contributorsListView,
-				data = {};
+			var compiledTemplate;
 
 			$( '.menu li' ).removeClass( 'active' );
-			$( '.menu li a[href="' + window.location.hash + '"]' ).parent().addclass( 'active' );
+			$( '.menu li a[href="' + window.location.hash + '"]' ).parent().addClass( 'active' );
 
-			total_contributions = this.getTotalContributions( this.collection.models );
-			total_contributors = this.collection.models.length;
+			var total_contributions = this.getTotalContributions( this.collection.models );
+			var total_contributors = this.collection.models.length;
 
-			data = {
+			var data = {
 				total_contributions: total_contributions,
 				total_contributors: total_contributors
 			}
@@ -45,7 +41,7 @@ define([
 			this.$el.html( compiledTemplate );
 
 			// subview
-			contributorsListView = new ContributorsListView({ collection: this.collection });
+			var contributorsListView = new ContributorsListView({ collection: this.collection });
 			contributorsListView.render();
 		},
 
